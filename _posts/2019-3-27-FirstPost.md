@@ -38,28 +38,28 @@ There are 2 options crossed my mind at that time:
    6. Routing request sent to 443
       Edit nginx config file - `nginx.config`
       This is the simple https config, you can read Nginx details if you want to add more configuration:
-      ```
-      # HTTPS server
+        ```
+        # HTTPS server
 
-      server {
-           listen       443 ssl;
-           server_name  localhost;
+        server {
+             listen       443 ssl;
+             server_name  localhost;
 
-           ssl_certificate      /etc/ssl/server/android_2/CA.crt;
-           ssl_certificate_key  /etc/ssl/server/android_2/priv_and_pub.key;
+             ssl_certificate      /etc/ssl/server/android_2/CA.crt;
+             ssl_certificate_key  /etc/ssl/server/android_2/priv_and_pub.key;
 
-           location / {
-             proxy_pass http://0.0.0.0:1080;  #mock server endpoint
-           }
-      }
-      ```
+             location / {
+               proxy_pass http://0.0.0.0:1080;  #mock server endpoint
+             }
+        }
+        ```
 
-    7. Now Start Nginx, or restart if it was already running
-    8. Test if your endpoint working by sent any request to `https://localhost` without adding port, if its working you will see the untrusted credentials warning show up
-    9. Now the last part to make the certificate trusted on Android Device, add mock-server host ip resolved as FQDN on certificate.
-       - Make sure you have adb installed
-       - `adb shell`
-       - Add FQDN in `/etc/hosts/` file like so
+  7. Now Start Nginx, or restart if it was already running
+  8. Test if your endpoint working by sent any request to `https://localhost` without adding port, if its working you will see the untrusted credentials warning show up
+  9. Now the last part to make the certificate trusted on Android Device, add mock-server host ip resolved as FQDN on certificate.
+     - Make sure you have adb installed
+     - `adb shell`
+     - Add FQDN in `/etc/hosts/` file like so
 
        ```
         ##
@@ -69,7 +69,7 @@ There are 2 options crossed my mind at that time:
         <your_public_ip>    mock-api.com
         ```
 
-    10. Our Android devices now can resolve `mock-api.com` as FQDN for local mock-server
+  10. Our Android devices now can resolve `mock-api.com` as FQDN for local mock-server
 
 
 #### Useful Links
