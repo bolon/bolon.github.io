@@ -73,6 +73,6 @@ There are 2 options crossed my mind at that time:
 
 
 #### Useful Links
- https://aboutssl.org/how-to-create-and-import-self-signed-certificate-to-android-device
- https://stackoverflow.com/questions/1095780/are-ssl-certificates-bound-to-the-servers-ip-address
- https://stackoverflow.com/a/49161767
+ [https://aboutssl.org/how-to-create-and-import-self-signed-certificate-to-android-device](https://aboutssl.org/how-to-create-and-import-self-signed-certificate-to-android-device)
+ [https://stackoverflow.com/questions/1095780/are-ssl-certificates-bound-to-the-servers-ip-address](https://stackoverflow.com/questions/1095780/are-ssl-certificates-bound-to-the-servers-ip-address)
+ [https://stackoverflow.com/a/49161767](https://stackoverflow.com/a/49161767)
